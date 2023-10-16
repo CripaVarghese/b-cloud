@@ -8,6 +8,10 @@ export const data = {
   datasets: [
     {
       label: "# of Votes",
+      options: {
+        width:"1",
+        height:"1",
+        },
       data: [50,40,10],
       backgroundColor: [
         "#5E9CFF",
@@ -19,7 +23,7 @@ export const data = {
         "#5E9CFF",
         "#98C1FE"
       ],
-      borderWidth: 1
+      borderWidth: 1,
     }
   ]
 };

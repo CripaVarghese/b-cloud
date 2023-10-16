@@ -4,15 +4,14 @@ import {productDetailsStyles as style} from "../styles"
 
 const CustomProduct= () => {
   return (
-    <Stack>
+    <Stack w={{ base:'', md:'100%',lg:'50%'}} h={{md:'90%', lg:'100%'}} justifyContent={'space-between'}>
         <Text color={'#0063FF'} {...style.lgFontStyles}>
         Custom Product Insights
         </Text>
-    
-        <Card maxW='sm' h={'450'} borderTop={'5px solid #0063FF'} borderRadius={'15'}>
-            <CardBody p='7' >
+        <Card borderTop={'5px solid #0063FF'} borderRadius={'15'} boxShadow={'rgba(149, 157, 165, 0.2) 0px 8px 24px'}>
+            <CardBody p='4'>
             <Flex flexDirection={'column'}>
-              <Text mt={5} fontSize={'13'} fontWeight={'extrabold'}>
+              <Text fontSize={'13'} fontWeight={'extrabold'}>
                Sales by Time of Day <span color="#6B6B6B">(Last 24 Hours)</span>
               </Text>
             </Flex>

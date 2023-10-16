@@ -5,7 +5,7 @@ import Settings from "../assets/Settings"
 
 const Header = () => {
   return (
-    <HStack justifyContent={'space-between'} m={{ base: '0 10px', md:'0 55px', lg:'0 55px'}} height={16}>
+    <HStack justifyContent={'space-between'} p={{ base: '0 10px', md:'0 55px', lg:'0 55px'}} height={16}>
       <CloudLogo />
       <Cantaloupe />
       <HStack >

@@ -6,15 +6,15 @@ import Hero from './components/Hero'
 
 function App() {
   return (
-    <Stack w={'100vw'} h={'100vh'}>
+    <Stack>
       <Stack flexDirection={'column'} alignItems={'center'} height={'100%'}>
-        <Box w={'100%'}  mb={3} boxShadow={'rgba(0, 0, 0, 0.05) 0px 1px 2px 0px'} >
+        <Box w={'100%'} mb={3} boxShadow={'rgba(0, 0, 0, 0.05) 0px 1px 2px 0px'} >
           <Header />
             <Divider />
           <Navbar />
           </Box>
-        <Box w={{ md:'85%',lg:'92%' }}>
-        <Hero />
+        <Box w={{ md:'90%',lg:'92.5%', '2xl':'80%' }}>
+         <Hero />
         </Box>
       </Stack>
     </Stack>
