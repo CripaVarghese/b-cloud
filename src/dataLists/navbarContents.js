@@ -16,61 +16,73 @@ const navbarContents = [
     svg: Dashboard,
     title: "Dashboard",
     href: "#",
+    path: "DASHBOARD",
   },
   {
     svg: Markets,
     title: "Markets",
     href: "#",
+    path: "MARKETS",
   },
   {
     svg: Machines,
     title: "Machines",
     href: "#",
+    path: "MACHINES",
   },
   {
     svg: Operators,
     title: "Operators",
     href: "#",
+    path: "OPERATORS",
   },
   {
     svg: Products,
     title: "Products",
     href: "#",
+    path: "PRODUCTS",
   },
   {
     svg: Transactions,
     title: "Transactions",
     href: "#",
+    path: "TRANSACTIONS",
   },
   {
     svg: Events,
     title: "Events",
     href: "#",
+    path: "EVENTS",
   },
   {
     svg: Content,
     title: "Content",
     href: "#",
+    path: "CONTENT",
   },
   {
     svg: Jobs,
     title: "Jobs",
     href: "#",
+    path: "JOBS",
   },
   {
     svg: Billing,
     title: "Billing",
     href: "#",
+    path: "BILLING",
   },
   {
     svg: Reports,
     title: "Reports",
     href: "#",
+    path: "REPORTS",
   },
   {
     svg: Admin,
     title: "Admin",
     href: "#",
+    path: "ADMIN",
   },
 ];
 
