@@ -1,3 +1,7 @@
 
 #root {
 }
+
+svg:hover .list{
+  fill: #111;
+}
