@@ -1,10 +1,8 @@
 import { Box, HStack, IconButton } from "@chakra-ui/react";
-import navbarContents from "../dataLists/navbarContents";
-// import { useNavigate } from "react-router-dom";
-// import { URL_PATHS } from "../constants/routes";
+import { Link } from "react-router-dom";
+import { navbar } from "../constants/navbar";
 
 const Navbar = () => {
-  // const navigate = useNavigate();
   return (
     <HStack
       justifyContent={"space-between"}
@@ -14,27 +12,21 @@ const Navbar = () => {
       gap={{ md: "0" }}
       overflow={"auto"}
     >
-      {navbarContents.map((navbarContent, i) => (
-        <HStack
-          key={i}
-          gap={{ lg: "0" }}
-          pr={{ sm: "0", md: "5", lg: "15px" }}
-          py={{ sm: "0", md: "1", lg: "2" }}
-          _hover={{ backgroundColor: "#E4F1FF", borderRadius: "15" }}
-          // onClick={() => navigate(URL_PATHS.DASHBOARD)}
-          cursor={"pointer"}
-        >
-          <IconButton variant="link" icon={<navbarContent.svg />} />
-          <Box
-            key={i}
-            href={navbarContent.href ?? "#"}
-            fontSize={"11"}
-            fontWeight={500}
+      {navbar.map((navbarItem, i) => (
+        <Link to={navbarItem.href} key={i}>
+          <HStack
+            gap={{ lg: "0" }}
+            pr={{ sm: "0", md: "5", lg: "15px" }}
+            py={{ sm: "0", md: "1", lg: "2" }}
+            _hover={{ backgroundColor: "#E4F1FF", borderRadius: "15" }}
+            cursor={"pointer"}
           >
-            {navbarContent.title}
-          </Box>
-          {/* </Button> */}
-        </HStack>
+            <IconButton variant="link" icon={<navbarItem.svg />} />
+            <Box fontSize={"11"} fontWeight={500}>
+              {navbarItem.title}
+            </Box>
+          </HStack>
+        </Link>
       ))}
     </HStack>
   );
