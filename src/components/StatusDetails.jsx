@@ -23,11 +23,11 @@ const StatusDetails = () => {
             direction={{ base: "column", md: "column", lg: "row" }}
             justifyContent={"space-between"}
             alignItems={{ md: "flex-start", lg: "center" }}
+            gap={10}
           >
             {statusList.map((list, i) => (
               <Stack
                 key={i}
-                py={{ base: "3", md: "0", lg: "0" }}
                 direction={{ lg: "row" }}
                 w={{ md: "100%", lg: "100%" }}
                 justifyContent={"space-between"}

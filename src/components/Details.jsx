@@ -7,7 +7,7 @@ import Chart from "./Chart";
 const Details = () => {
   return (
     <Stack
-      w={{ base: "80%", md: "55%", lg: "74.5%", "2xl": "75%" }}
+      w={{ base: "80%", md: "55%", lg: "100%", "2xl": "75%" }}
       h={"89.5%"}
       justifyContent={{
         base: "80%",
