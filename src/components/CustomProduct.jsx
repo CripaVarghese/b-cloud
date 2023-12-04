@@ -5,7 +5,7 @@ import { productDetailsStyles as style } from "../styles";
 const CustomProduct = () => {
   return (
     <Stack
-      w={{ base: "", md: "100%", lg: "50%" }}
+      w={{ md: "100%", lg: "40%" }}
       h={{ md: "90%", lg: "100%" }}
       justifyContent={"space-between"}
     >

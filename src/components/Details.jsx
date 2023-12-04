@@ -11,11 +11,10 @@ const Details = () => {
       h={"89.5%"}
       justifyContent={{
         base: "80%",
-        md: "",
         lg: "space-between",
         "2xl": "space-between",
       }}
-      gap={{ base: "", md: "5", lg: "2", "2xl": "5" }}
+      gap={{ md: "5", lg: "2", "2xl": "5" }}
     >
       <StatusDetails />
       <Stack gap={"5"}>
@@ -27,13 +26,13 @@ const Details = () => {
           justifyContent={"space-between"}
         >
           <CustomProduct />
-          <Stack justifyContent={"space-between"} gap={"0"}>
+          <Stack w="100%" justifyContent={"space-between"} gap={"0"}>
             <SelectDuration />
             <Chart
               color="#0063FF"
               data={data1Default}
-              width={{ base: "", md: "100%", lg: 630, "2xl": 1020 }}
-              height={{ base: "", md: 390, lg: 370, "2xl": 485 }}
+              width={{ md: "100%", lg: "100%", "2xl": "100%" }}
+              height={{ md: 390, lg: 370, "2xl": 485 }}
               text={"Units Sold"}
             />
           </Stack>
@@ -42,8 +41,8 @@ const Details = () => {
         <Chart
           color="#00CD4D"
           data={data2}
-          width={{ base: "", md: "100%", lg: "100%", "2xl": "100%" }}
-          height={{ base: "", md: 390, lg: 370, "2xl": 400 }}
+          width={{ md: "100%", lg: "100%", "2xl": "100%" }}
+          height={{ md: 390, lg: 370, "2xl": 400 }}
           text={"Revenue"}
         />
       </Stack>
