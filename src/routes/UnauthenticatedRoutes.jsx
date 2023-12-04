@@ -1,4 +1,4 @@
-import { Router, Routes } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import { URL_PATHS } from "../constants/routes";
 import Dashboard from "../components/navbar_components/Dashboard";
 import Markets from "../components/navbar_components/Markets";
@@ -15,20 +15,20 @@ import Admin from "../components/navbar_components/Admin";
 
 const UnauthenticatedRoutes = () => {
   return (
-    <Router>
-      <Routes path={URL_PATHS.DASHBOARD} element={<Dashboard />} />
-      <Routes path={URL_PATHS.MARKETS} element={<Markets />} />
-      <Routes path={URL_PATHS.MACHINES} element={<Machines />} />
-      <Routes path={URL_PATHS.OPERATORS} element={<Operators />} />
-      <Routes path={URL_PATHS.PRODUCTS} element={<Products />} />
-      <Routes path={URL_PATHS.TRANSACTIONS} element={<Transactions />} />
-      <Routes path={URL_PATHS.EVENTS} element={<Events />} />
-      <Routes path={URL_PATHS.CONTENT} element={<Content />} />
-      <Routes path={URL_PATHS.JOBS} element={<Jobs />} />
-      <Routes path={URL_PATHS.BILLING} element={<Billing />} />
-      <Routes path={URL_PATHS.REPORTS} element={<Reports />} />
-      <Routes path={URL_PATHS.ADMIN} element={<Admin />} />
-    </Router>
+    <Routes>
+      <Route path={URL_PATHS.DASHBOARD} element={<Dashboard />} />
+      <Route path={URL_PATHS.MARKETS} element={<Markets />} />
+      <Route path={URL_PATHS.MACHINES} element={<Machines />} />
+      <Route path={URL_PATHS.OPERATORS} element={<Operators />} />
+      <Route path={URL_PATHS.PRODUCTS} element={<Products />} />
+      <Route path={URL_PATHS.TRANSACTIONS} element={<Transactions />} />
+      <Route path={URL_PATHS.EVENTS} element={<Events />} />
+      <Route path={URL_PATHS.CONTENT} element={<Content />} />
+      <Route path={URL_PATHS.JOBS} element={<Jobs />} />
+      <Route path={URL_PATHS.BILLING} element={<Billing />} />
+      <Route path={URL_PATHS.REPORTS} element={<Reports />} />
+      <Route path={URL_PATHS.ADMIN} element={<Admin />} />
+    </Routes>
   );
 };
 
