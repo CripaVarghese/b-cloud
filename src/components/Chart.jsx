@@ -10,7 +10,7 @@ import {
 import { Card, CardBody, Text } from "@chakra-ui/react";
 import { productDetailsStyles as style } from "../styles";
 
-export default function App(props) {
+export default function Chart(props) {
   // eslint-disable-next-line react/prop-types
   const { data, width, height, color, text } = props;
   return (
