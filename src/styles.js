@@ -5,7 +5,7 @@ const textStyles = {
 
 const lgFontStyles = {
   fontSize: "2xl",
-  fontWeight: "extrabold",
+  fontWeight: "bold",
 };
 
 export const productDetailsStyles = {
