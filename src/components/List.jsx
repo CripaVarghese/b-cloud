@@ -15,29 +15,20 @@ const List = () => {
           <Button
             w="100%"
             justifyContent={"flex-start"}
-            p={"12px 15px"}
+            p={"20px 25px"}
             _hover={{ bg: "#0363FE", color: "white" }}
             color="#0363FE"
             variant="ghost"
             cursor={"pointer"}
             fontSize={"11"}
-            fontWeight={"extrabold"}
-            border={".5px solid #0363FE"}
+            fontWeight={"semibold"}
+            border={".5px solid #7FB2FF"}
             borderRadius={5}
             href={list.href ?? "#"}
             leftIcon={<list.svg />}
           >
             {list.title}
           </Button>
-          {/* <list.svg />
-          <Box
-            key={i}
-            href={list.href ?? "#"}
-            fontSize={"11"}
-            fontWeight={"extrabold"}
-          >
-            {list.title}
-          </Box> */}
         </HStack>
       ))}
     </Stack>
