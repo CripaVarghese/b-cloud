@@ -1,4 +1,4 @@
-import { Box, HStack, Stack } from "@chakra-ui/react";
+import { Button, HStack, Stack } from "@chakra-ui/react";
 import buttonList from "../dataLists/buttonList";
 
 const List = () => {
@@ -6,19 +6,30 @@ const List = () => {
     <Stack
       justifyContent={"space-between"}
       w={"100%"}
-      h={{ base: "80%", md: "70%", lg: "245", "2xl": "300" }}
+      h="100%"
+      gap="3"
+      // h={{ base: "80%", md: "70%", lg: "245", "2xl": "300" }}
     >
       {buttonList.map((list, i) => (
-        <HStack
-          key={i}
-          border={"1px solid #0063FF"}
-          borderRadius={5}
-          p={"11px 15px"}
-          color="#0063FF"
-          _hover={{ bg: "#0063FF", color: "white" }}
-          cursor={"pointer"}
-        >
-          <list.svg />
+        <HStack key={i}>
+          <Button
+            w="100%"
+            justifyContent={"flex-start"}
+            p={"12px 15px"}
+            _hover={{ bg: "#0363FE", color: "white" }}
+            color="#0363FE"
+            variant="ghost"
+            cursor={"pointer"}
+            fontSize={"11"}
+            fontWeight={"extrabold"}
+            border={".5px solid #0363FE"}
+            borderRadius={5}
+            href={list.href ?? "#"}
+            leftIcon={<list.svg />}
+          >
+            {list.title}
+          </Button>
+          {/* <list.svg />
           <Box
             key={i}
             href={list.href ?? "#"}
@@ -26,7 +37,7 @@ const List = () => {
             fontWeight={"extrabold"}
           >
             {list.title}
-          </Box>
+          </Box> */}
         </HStack>
       ))}
     </Stack>

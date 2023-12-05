@@ -1,4 +1,4 @@
-import { Box, HStack, IconButton } from "@chakra-ui/react";
+import { Button, HStack } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import { navbar } from "../constants/navbar";
 
@@ -14,17 +14,27 @@ const Navbar = () => {
     >
       {navbar.map((navbarItem, i) => (
         <Link to={navbarItem.href} key={i}>
-          <HStack
-            gap={{ lg: "0" }}
-            pr={{ sm: "0", md: "5", lg: "15px" }}
-            py={{ sm: "0", md: "1", lg: "2" }}
-            _hover={{ backgroundColor: "#E4F1FF", borderRadius: "15" }}
-            cursor={"pointer"}
-          >
-            <IconButton variant="link" icon={<navbarItem.svg />} />
-            <Box fontSize={"11"} fontWeight={500}>
+          <HStack>
+            <Button
+              leftIcon={<navbarItem.svg />}
+              variant="ghost"
+              fontSize={"11"}
+              fontWeight={500}
+              size="xs"
+              borderRadius="15"
+              p="13px 12px"
+              _hover={{ backgroundColor: "#E4F1FF", borderRadius: "15" }}
+              cursor={"pointer"}
+              _active={{
+                bg: "#E4F1FF",
+                borderColor: "#E4F1FF",
+              }}
+              _focus={{
+                bg: "#E4F1FF",
+              }}
+            >
               {navbarItem.title}
-            </Box>
+            </Button>
           </HStack>
         </Link>
       ))}
