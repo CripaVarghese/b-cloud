@@ -23,7 +23,7 @@ export default function Chart(props) {
         <Text fontFamily={"Work Sans"} {...style.textStyles}>
           {text} (Last 24 hours)
         </Text>
-        <ResponsiveContainer height="95%">
+        <ResponsiveContainer height="94%">
           <BarChart
             data={data}
             margin={{

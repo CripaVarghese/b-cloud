@@ -15,7 +15,7 @@ const List = () => {
           <Button
             w="100%"
             justifyContent={"flex-start"}
-            p={"20px 25px"}
+            p={{ md: "20px 15px", lg: "20px 25px" }}
             _hover={{ bg: "#0363FE", color: "white" }}
             color="#0363FE"
             variant="ghost"

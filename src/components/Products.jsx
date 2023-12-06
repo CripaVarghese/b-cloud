@@ -11,8 +11,7 @@ const Products = () => {
       </Text>
 
       <Stack
-        w={{ "2xl": "100%" }}
-        h={{ lg: "113vh", "2xl": "100%" }}
+        gap="24px"
         flexDirection={{ base: "column", md: "row", lg: "row" }}
         justifyContent={"space-between"}
         alignItems={{ base: "center", md: "flex-start" }}

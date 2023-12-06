@@ -1,17 +1,14 @@
 import { Card, CardBody, Text, Stack, Flex } from "@chakra-ui/react";
 import { DoughnutDetails } from "./DoughnutDetails";
-import { productDetailsStyles as style } from "../styles";
 
-const CustomProduct = () => {
+const DoughnutChart = () => {
   return (
     <Stack
-      w={{ md: "100%", lg: "40%" }}
-      h={{ md: "90%", lg: "100%" }}
+      // w={{ md: "100%", lg: "29%" }}
+      w="290px"
+      // h={{ md: "90%", lg: "100%" }}
       justifyContent={"space-between"}
     >
-      <Text color={"#0063FF"} {...style.lgFontStyles}>
-        Custom Product Insights
-      </Text>
       <Card
         borderTop={"5px solid #0063FF"}
         borderRadius={"15"}
@@ -30,4 +27,4 @@ const CustomProduct = () => {
   );
 };
 
-export default CustomProduct;
+export default DoughnutChart;
