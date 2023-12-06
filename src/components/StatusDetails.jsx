@@ -1,4 +1,12 @@
-import { Card, CardBody, Box, Text, Stack, Flex } from "@chakra-ui/react";
+import {
+  Card,
+  CardBody,
+  Box,
+  Text,
+  Stack,
+  Flex,
+  Divider,
+} from "@chakra-ui/react";
 import statusList from "../dataLists/statusList";
 
 const StatusDetails = () => {
@@ -16,9 +24,9 @@ const StatusDetails = () => {
           alignItems={{ md: "flex-start", lg: "center" }}
           gap={5}
         >
-          {statusList.map((list, i) => (
+          {statusList.map((list, index) => (
             <Stack
-              key={i}
+              key={index}
               direction={{ lg: "row" }}
               w="100%"
               justifyContent={"space-between"}
@@ -44,7 +52,9 @@ const StatusDetails = () => {
                   />
                 }
               </Box>
-              {/* <Divider orientation="vertical" /> */}
+              {index !== 2 ? (
+                <Divider h="100px" orientation="vertical" />
+              ) : null}
             </Stack>
           ))}
         </Flex>
