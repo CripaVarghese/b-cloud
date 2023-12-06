@@ -14,16 +14,21 @@ const Sidebar = () => {
   };
   return (
     <Card
-      w={{ base: "80%", md: "30%", lg: "24%" }}
-      h={{ "2xl": "55%" }}
+      w={{ base: "80%", md: "40%", lg: "24%", xl: "24%" }}
       boxShadow={"rgba(149, 157, 165, 0.2) 0px 10px 24px"}
       py="3px"
     >
       <CardBody p="6">
-        <Stack justifyContent={"space-between"} gap={3}>
+        <Stack justifyContent={"space-between"}>
+          {/* gap={3} */}
           {toggle ? (
             <>
-              <Button variant={"ghost"} _hover={{ variant: "ghost" }}>
+              <Button
+                border="2px solid"
+                color="transparent"
+                variant={"ghost"}
+                _hover={{ variant: "ghost" }}
+              >
                 <FaArrowRight color={"#0363FE"} onClick={() => handleClick()} />
               </Button>
               <ToggleHide />
@@ -31,7 +36,13 @@ const Sidebar = () => {
           ) : (
             <>
               <Button
-                w="50%"
+                w={{
+                  base: "70%",
+                  md: "85%",
+                  lg: "75%",
+                  xl: "50%",
+                  "2xl": "30%",
+                }}
                 variant={"ghost"}
                 border="2px solid"
                 color={"#0363FE"}

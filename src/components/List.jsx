@@ -5,13 +5,7 @@ const List = (props) => {
   // eslint-disable-next-line react/prop-types
   const { toggle } = props;
   return (
-    <Stack
-      justifyContent={"space-between"}
-      // w={"100%"}
-      h="100%"
-      gap="3"
-      // h={{ base: "80%", md: "70%", lg: "245", "2xl": "300" }}
-    >
+    <Stack justifyContent={"space-between"} h="100%" gap="3">
       {buttonList.map((list, i) => (
         <HStack
           key={i}

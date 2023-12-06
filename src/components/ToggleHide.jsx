@@ -1,23 +1,15 @@
 import { Stack, Image, Box, Button, HStack } from "@chakra-ui/react";
 import buttonList from "../dataLists/buttonList";
 
-const ToggleHide = (props) => {
-  const { toggle, setToggle } = props;
-
+const ToggleHide = () => {
   return (
-    <>
-      <Stack h="50px">
-        <Image w="100px" src="/images/Dairymilk.png" />
+    <Stack gap={{ lg: "0", xl: "10", "2xl": "20" }}>
+      <Stack h="100px" alignItems={"center"}>
+        <Image src="/images/Dairymilk.png" />
       </Stack>
 
       <Box>
-        <Stack
-          justifyContent={"space-between"}
-          // w={"100%"}
-          h="100%"
-          gap="3"
-          // h={{ base: "80%", md: "70%", lg: "245", "2xl": "300" }}
-        >
+        <Stack justifyContent={"space-between"} h="100%" gap="3">
           {buttonList.map((list, i) => (
             <HStack
               key={i}
@@ -36,7 +28,7 @@ const ToggleHide = (props) => {
           ))}
         </Stack>
       </Box>
-    </>
+    </Stack>
   );
 };
 
