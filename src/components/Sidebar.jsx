@@ -1,7 +1,17 @@
-import { Card, CardBody, Text, Stack, Box, Image } from "@chakra-ui/react";
-import List from "./List";
+import { Card, CardBody, Stack, Button } from "@chakra-ui/react";
+import { FaArrowLeft, FaArrowRight } from "react-icons/Fa";
+
+import { useState } from "react";
+import ToggleDisplay from "./ToggleDisplay";
+import ToggleHide from "./ToggleHide";
 
 const Sidebar = () => {
+  const [toggle, setToggle] = useState(false);
+  const handleClick = () => {
+    setToggle((previousClick) => {
+      return !previousClick;
+    });
+  };
   return (
     <Card
       w={{ base: "80%", md: "30%", lg: "24%" }}
@@ -11,19 +21,28 @@ const Sidebar = () => {
     >
       <CardBody p="6">
         <Stack justifyContent={"space-between"} gap={3}>
-          <Stack>
-            <Image src="/images/Dairymilk.png" />
-            <Stack gap={0}>
-              <Text fontSize={"lg"} fontWeight={"bold"}>
-                Dairy Milk
-              </Text>
-              <Text fontSize={"xs"}>Chocolates</Text>
-            </Stack>
-          </Stack>
-
-          <Box>
-            <List />
-          </Box>
+          {toggle ? (
+            <>
+              <Button variant={"ghost"} _hover={{ variant: "ghost" }}>
+                <FaArrowRight color={"#0363FE"} onClick={() => handleClick()} />
+              </Button>
+              <ToggleHide />
+            </>
+          ) : (
+            <>
+              <Button
+                w="50%"
+                variant={"ghost"}
+                border="2px solid"
+                color={"#0363FE"}
+                leftIcon={<FaArrowLeft />}
+                onClick={() => handleClick()}
+              >
+                Hide Sidebar
+              </Button>
+              <ToggleDisplay toggle={toggle} setToggle={setToggle} />
+            </>
+          )}
         </Stack>
       </CardBody>
     </Card>
