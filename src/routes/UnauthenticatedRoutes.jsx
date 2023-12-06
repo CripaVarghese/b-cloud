@@ -1,33 +1,22 @@
 import { Routes, Route } from "react-router-dom";
-import { URL_PATHS } from "../constants/routes";
-import Dashboard from "../components/navbar_components/Dashboard";
-import Markets from "../components/navbar_components/Markets";
-import Machines from "../components/navbar_components/Machines";
-import Operators from "../components/navbar_components/Operators";
-import Products from "../components/navbar_components/Products";
-import Transactions from "../components/navbar_components/Transactions";
-import Events from "../components/navbar_components/Events";
-import Content from "../components/navbar_components/Content";
-import Jobs from "../components/navbar_components/Jobs";
-import Billing from "../components/navbar_components/Billing";
-import Reports from "../components/navbar_components/Reports";
-import Admin from "../components/navbar_components/Admin";
+import { URL_PATHS } from "./constants/routes";
+import Products from "./components/Products";
 
 const UnauthenticatedRoutes = () => {
   return (
     <Routes>
-      <Route path={URL_PATHS.DASHBOARD} element={<Dashboard />} />
-      <Route path={URL_PATHS.MARKETS} element={<Markets />} />
-      <Route path={URL_PATHS.MACHINES} element={<Machines />} />
-      <Route path={URL_PATHS.OPERATORS} element={<Operators />} />
+      <Route path={URL_PATHS.DASHBOARD} element={<h1>DASHBOARD</h1>} />
+      <Route path={URL_PATHS.MARKETS} element={<h1>MARKETS</h1>} />
+      <Route path={URL_PATHS.MACHINES} element={<h1>MACHINES</h1>} />
+      <Route path={URL_PATHS.OPERATORS} element={<h1>OPERATORS</h1>} />
       <Route path={URL_PATHS.PRODUCTS} element={<Products />} />
-      <Route path={URL_PATHS.TRANSACTIONS} element={<Transactions />} />
-      <Route path={URL_PATHS.EVENTS} element={<Events />} />
-      <Route path={URL_PATHS.CONTENT} element={<Content />} />
-      <Route path={URL_PATHS.JOBS} element={<Jobs />} />
-      <Route path={URL_PATHS.BILLING} element={<Billing />} />
-      <Route path={URL_PATHS.REPORTS} element={<Reports />} />
-      <Route path={URL_PATHS.ADMIN} element={<Admin />} />
+      <Route path={URL_PATHS.TRANSACTIONS} element={<h1>TRANSACTIONS</h1>} />
+      <Route path={URL_PATHS.EVENTS} element={<h1>EVENTS</h1>} />
+      <Route path={URL_PATHS.CONTENT} element={<h1>CONTENT</h1>} />
+      <Route path={URL_PATHS.JOBS} element={<h1>JOBS</h1>} />
+      <Route path={URL_PATHS.BILLING} element={<h1>BILLING</h1>} />
+      <Route path={URL_PATHS.REPORTS} element={<h1>REPORTS</h1>} />
+      <Route path={URL_PATHS.ADMIN} element={<h1>ADMIN</h1>} />
     </Routes>
   );
 };
