@@ -1,11 +1,11 @@
 import { Card, CardBody, Text, Stack, Flex } from "@chakra-ui/react";
-import { DoughnutDetails } from "./DoughnutDetails";
+import DoughnutChart from "./DoughnutChart";
 
-const DoughnutChart = () => {
+const DoughnutChartDetails = () => {
   return (
     <Stack
-      // w={{ md: "100%", lg: "29%" }}
       w="290px"
+      // w={{ md: "100%", lg: "29%" }}
       // h={{ md: "90%", lg: "100%" }}
       justifyContent={"space-between"}
     >
@@ -20,11 +20,11 @@ const DoughnutChart = () => {
               Sales by Time of Day <span color="#6B6B6B">(Last 24 Hours)</span>
             </Text>
           </Flex>
-          <DoughnutDetails />
+          <DoughnutChart />
         </CardBody>
       </Card>
     </Stack>
   );
 };
 
-export default DoughnutChart;
+export default DoughnutChartDetails;

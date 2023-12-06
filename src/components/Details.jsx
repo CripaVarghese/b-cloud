@@ -1,6 +1,6 @@
 import ChartRevenue from "./ChartRevenue";
 import ChartUnitSold from "./ChartUnitSold";
-import DoughnutChart from "./CustomProduct";
+import DoughnutChartDetails from "./CustomProduct";
 import InsightsHeader from "./InsightsHeader";
 import StatusDetails from "./StatusDetails";
 import { Stack } from "@chakra-ui/react";
@@ -23,7 +23,7 @@ const Details = () => {
           flexDirection={{ base: "column", md: "column", lg: "row" }}
           gap="20px"
         >
-          <DoughnutChart />
+          <DoughnutChartDetails />
           <ChartUnitSold />
         </Stack>
       </Stack>
