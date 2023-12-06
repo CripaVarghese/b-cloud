@@ -1,31 +1,27 @@
-import Header from "./components/Header";
-import { Box, Divider, Stack } from "@chakra-ui/react";
-import Navbar from "./components/Navbar";
-import UnauthenticatedRoutes from "./routes/UnauthenticatedRoutes";
+import { Routes, Route } from "react-router-dom";
+import { URL_PATHS } from "./constants/routes";
+import Products from "./components/Products";
+import AppLayout from "./components/AppLayout";
 
-function App() {
+const App = () => {
   return (
-    <>
-      <Stack flexDirection={"column"} alignItems={"center"} height={"100%"}>
-        <Box
-          w={"100%"}
-          mb={3}
-          boxShadow={"rgba(0, 0, 0, 0.05) 0px 1px 2px 0px"}
-          position={"fixed"}
-          zIndex={"1"}
-          bg="white"
-        >
-          <Header />
-          <Divider />
-          <Navbar />
-        </Box>
-
-        <Box w={{ md: "90%", lg: "92.5%", "2xl": "80%" }} pt="130px">
-          <UnauthenticatedRoutes />
-        </Box>
-      </Stack>
-    </>
+    <Routes>
+      <Route element={<AppLayout />}>
+        <Route path={URL_PATHS.DASHBOARD} element={<h1>DASHBOARD</h1>} />
+        <Route path={URL_PATHS.MARKETS} element={<h1>MARKETS</h1>} />
+        <Route path={URL_PATHS.MACHINES} element={<h1>MACHINES</h1>} />
+        <Route path={URL_PATHS.OPERATORS} element={<h1>OPERATORS</h1>} />
+        <Route path={URL_PATHS.PRODUCTS} element={<Products />} />
+        <Route path={URL_PATHS.TRANSACTIONS} element={<h1>TRANSACTIONS</h1>} />
+        <Route path={URL_PATHS.EVENTS} element={<h1>EVENTS</h1>} />
+        <Route path={URL_PATHS.CONTENT} element={<h1>CONTENT</h1>} />
+        <Route path={URL_PATHS.JOBS} element={<h1>JOBS</h1>} />
+        <Route path={URL_PATHS.BILLING} element={<h1>BILLING</h1>} />
+        <Route path={URL_PATHS.REPORTS} element={<h1>REPORTS</h1>} />
+        <Route path={URL_PATHS.ADMIN} element={<h1>ADMIN</h1>} />
+      </Route>
+    </Routes>
   );
-}
+};
 
 export default App;
