@@ -6,10 +6,15 @@ import {
   Stack,
   Flex,
   Divider,
+  useBreakpointValue,
 } from "@chakra-ui/react";
 import statusList from "../dataLists/statusList";
 
 const StatusDetails = () => {
+  const orientation = useBreakpointValue({
+    sm: "horizontal",
+    lg: "vertical",
+  });
   return (
     <Card
       w={{ base: "100%", md: "100%", lg: "100%" }}
@@ -53,7 +58,9 @@ const StatusDetails = () => {
                 }
               </Box>
               {index !== 2 ? (
-                <Divider h="100px" orientation="vertical" />
+                <Stack>
+                  <Divider h="100px" orientation={orientation} />
+                </Stack>
               ) : null}
             </Stack>
           ))}
