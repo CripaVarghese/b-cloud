@@ -1,5 +1,5 @@
 import { Card, CardBody, Stack, Button } from "@chakra-ui/react";
-import { FaArrowLeft, FaArrowRight } from "react-icons/Fa";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 import { useState } from "react";
 import ToggleDisplay from "./ToggleDisplay";
