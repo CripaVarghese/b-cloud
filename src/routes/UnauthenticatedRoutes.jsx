@@ -1,7 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import { URL_PATHS } from "../constants/routes";
-
-import Products from "./components/Products";
+import Products from "../components/Products";
 
 const UnauthenticatedRoutes = () => {
   return (
