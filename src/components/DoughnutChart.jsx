@@ -1,27 +1,32 @@
 import { PieChart, Pie, Cell, Tooltip, Legend } from "recharts";
 
 const data = [
-  { name: "Morning 40%", value: 400, color: "#0088FE" },
-  { name: "Afternoon 10%", value: 300, color: "#0088FE" },
-  { name: "Evening 50%", value: 300, color: "#0088FE" },
+  { name: "Morning 40%", value: 400 },
+  { name: "Afternoon 10%", value: 300 },
+  { name: "Evening 50%", value: 300 },
 ];
 
 const COLORS = ["#0063FF", "#5E9CFF", "#98C1FE"];
 
 const DoughnutChart = () => {
   return (
-    <PieChart width={200} height={300}>
+    <PieChart width={250} height={270}>
       <Pie
         data={data}
-        // cx={500}
-        // cy={200}
+        cx={120}
+        cy={180}
         // fill="#8884d8"
         // label
-        innerRadius={50}
-        outerRadius={80}
+        innerRadius={40}
+        outerRadius={70}
         paddingAngle={0}
         dataKey="value"
         isAnimationActive={false}
+        wrapperStyle={{
+          left: "0%",
+          top: "0%",
+          position: "absolute",
+        }}
       >
         {data.map((entry, index) => (
           <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
