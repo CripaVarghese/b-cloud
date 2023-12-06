@@ -9,6 +9,8 @@ const SelectDuration = () => {
       fontSize={"10"}
       fontWeight={"medium"}
       position={"relative"}
+      iconColor={"#0063FF"}
+      iconSize="15px"
     >
       <Stack position={"absolute"}>
         <option value="option1">Option 1</option>

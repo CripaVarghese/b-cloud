@@ -8,7 +8,7 @@ const InsightsHeader = () => {
       w="100%"
       flexDirection={{ base: "column", lg: "row" }}
       alignItems={{ base: "flex-start", lg: "center" }}
-      mt="10px"
+      mt="12px"
       gap="24px"
     >
       <Text color={"#0063FF"} {...style.lgFontStyles} letterSpacing={".5px"}>

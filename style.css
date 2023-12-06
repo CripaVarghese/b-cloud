@@ -1,5 +1,10 @@
 
 
-svg:hover .list{
+svg:hover .icon{
   fill:white;
+}
+
+.active {
+  background-color: rgb(208, 255, 0);
+  color: white;
 }
