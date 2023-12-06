@@ -25,51 +25,51 @@ export const navbar = [
   {
     svg: Machines,
     title: "Machines",
-    href: "machines",
+    href: "/machines",
   },
   {
     svg: Operators,
     title: "Operators",
-    href: "operators",
+    href: "/operators",
   },
   {
     svg: Products,
     title: "Products",
-    href: "products",
+    href: "/",
   },
   {
     svg: Transactions,
     title: "Transactions",
-    href: "transactions",
+    href: "/transactions",
   },
   {
     svg: Events,
     title: "Events",
-    href: "events",
+    href: "/events",
   },
   {
     svg: Content,
     title: "Content",
-    href: "content",
+    href: "/content",
   },
   {
     svg: Jobs,
     title: "Jobs",
-    href: "jobs",
+    href: "/jobs",
   },
   {
     svg: Billing,
     title: "Billing",
-    href: "billing",
+    href: "/billing",
   },
   {
     svg: Reports,
     title: "Reports",
-    href: "reports",
+    href: "/reports",
   },
   {
     svg: Admin,
     title: "Admin",
-    href: "admin",
+    href: "/admin",
   },
 ];

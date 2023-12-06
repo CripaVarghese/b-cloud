@@ -3,7 +3,7 @@ export const URL_PATHS = {
   MARKETS: "/markets",
   MACHINES: "/machines",
   OPERATORS: "/operators",
-  PRODUCTS: "/products",
+  PRODUCTS: "/",
   TRANSACTIONS: "/transactions",
   EVENTS: "/events",
   CONTENT: "/content",
