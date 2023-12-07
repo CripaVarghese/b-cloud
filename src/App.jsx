@@ -8,6 +8,7 @@ const App = () => {
   return (
     <Routes>
       <Route element={<AppLayout />}>
+        <Route path={"/"} element={<Products />} />
         <Route path={URL_PATHS.DASHBOARD} element={<h1>DASHBOARD</h1>} />
         <Route path={URL_PATHS.MARKETS} element={<h1>MARKETS</h1>} />
         <Route path={URL_PATHS.MACHINES} element={<h1>MACHINES</h1>} />
