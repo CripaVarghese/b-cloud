@@ -1,4 +1,4 @@
-import { Card, CardBody, Text, Stack, Flex } from "@chakra-ui/react";
+import { Card, CardBody, Text, Stack, Flex, chakra } from "@chakra-ui/react";
 import DoughnutChart from "./DoughnutChart";
 
 const DoughnutChartDetails = () => {
@@ -15,9 +15,9 @@ const DoughnutChartDetails = () => {
         <CardBody p="4">
           <Stack gap={5}>
             <Flex flexDirection={"column"}>
-              <Text fontSize={"13"} fontWeight={"extrabold"}>
+              <Text fontSize={"13"} fontWeight={"bold"}>
                 Sales by Time of Day{" "}
-                <span color="#6B6B6B">(Last 24 Hours)</span>
+                <chakra.span color="#6B6B6B">(Last 24 hours)</chakra.span>
               </Text>
             </Flex>
             <DoughnutChart />

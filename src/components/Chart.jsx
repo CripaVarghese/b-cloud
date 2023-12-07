@@ -7,7 +7,8 @@ import {
   Tooltip,
   ResponsiveContainer,
 } from "recharts";
-import { Card, CardBody, Text } from "@chakra-ui/react";
+
+import { Card, CardBody, Text, chakra } from "@chakra-ui/react";
 import { productDetailsStyles as style } from "../styles";
 
 export default function Chart(props) {
@@ -20,8 +21,8 @@ export default function Chart(props) {
       height={height}
     >
       <CardBody>
-        <Text fontFamily={"Work Sans"} {...style.textStyles}>
-          {text} (Last 24 hours)
+        <Text fontSize={"xs"} fontWeight="bold">
+          {text} <chakra.span color="#6B6B6B">(Last 24 hours)</chakra.span>
         </Text>
         <ResponsiveContainer height="94%">
           <BarChart
