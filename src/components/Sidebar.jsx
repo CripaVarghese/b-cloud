@@ -6,7 +6,7 @@ import ToggleDisplay from "./ToggleDisplay";
 import ToggleHide from "./ToggleHide";
 
 const Sidebar = () => {
-  const [isExpanded, setExpanded] = useState(false);
+  const [isExpanded, setExpanded] = useState(true);
   const handleClick = () => {
     setExpanded((previousClick) => {
       return !previousClick;
