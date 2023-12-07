@@ -1,7 +1,8 @@
 import Sidebar from "./Sidebar";
 import { Stack, Text } from "@chakra-ui/react";
-import Details from "./Details";
+// import Details from "./Details";
 import { style } from "../styles";
+import { Outlet } from "react-router-dom";
 // import { Outlet } from "react-router-dom";
 
 const Products = () => {
@@ -15,12 +16,10 @@ const Products = () => {
         w={{ base: "80%", md: "100%" }}
         gap="24px"
         flexDirection={{ base: "column", md: "row", lg: "row" }}
-        justifyContent={"space-between"}
         alignItems={{ base: "center", md: "flex-start" }}
       >
         <Sidebar />
-        {/* <Outlet /> */}
-        <Details />
+        <Outlet />
       </Stack>
     </Stack>
   );

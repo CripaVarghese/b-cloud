@@ -35,7 +35,7 @@ export const navbar = [
   {
     svg: Products,
     title: "Products",
-    href: "/",
+    href: "/products",
   },
   {
     svg: Transactions,
