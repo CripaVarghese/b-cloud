@@ -38,7 +38,7 @@ const StatusDetails = () => {
               alignItems={"center"}
               gap={"20px"}
             >
-              <Stack justifyContent={"space-between"} gap={3}>
+              <Stack justifyContent={"space-between"} gap={3} w="100%">
                 <Text fontWeight="bold" fontSize={"xs"} mt="5px">
                   {list.title}
                 </Text>
@@ -59,7 +59,7 @@ const StatusDetails = () => {
               </Box>
               {index !== 2 ? (
                 <Stack>
-                  <Divider h="100px" orientation={orientation} />
+                  <Divider h="70px" orientation={orientation} />
                 </Stack>
               ) : null}
             </Stack>

@@ -9,7 +9,7 @@ const ChartUnitSold = () => {
         color="#0063FF"
         data={data}
         // width={{ md: "100%", lg: "390px", xl: "675px", "2xl": "100%" }}
-        w={{ lg: "50%", xl: "75%", "2xl": "100%" }}
+        // w={{ lg: "50%", xl: "75%", "2xl": "100%" }}
         height={{ md: 390, lg: "330", "2xl": 485 }}
         text={"Units Sold"}
       />

@@ -10,11 +10,11 @@ const COLORS = ["#0063FF", "#5E9CFF", "#98C1FE"];
 
 const DoughnutChart = () => {
   return (
-    <PieChart width={250} height={270}>
+    <PieChart width={250} height={250}>
       <Pie
         data={data}
         cx={120}
-        cy={180}
+        cy={150}
         // fill="#8884d8"
         // label
         innerRadius={40}

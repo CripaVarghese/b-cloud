@@ -28,10 +28,11 @@ const Sidebar = () => {
               <Button
                 w={{
                   base: "70%",
-                  md: "85%",
-                  lg: "75%",
-                  xl: "50%",
-                  "2xl": "30%",
+                  sm: "40%",
+                  md: "90%",
+                  lg: "100%",
+                  xl: "70%",
+                  "2xl": "40%",
                 }}
                 variant={"ghost"}
                 border="2px solid"
