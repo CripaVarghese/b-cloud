@@ -4,7 +4,14 @@ const SelectDuration = () => {
   return (
     <Select
       placeholder="Last 24 Hours"
-      w={{ base: "35%", md: "29%", lg: "18%", xl: "12%", "2xl": "8%" }}
+      w={{
+        base: "40%",
+        sm: "25%",
+        md: "29%",
+        lg: "16%",
+        xl: "12%",
+        "2xl": "8%",
+      }}
       h={"25"}
       fontSize={"10"}
       fontWeight={"medium"}
