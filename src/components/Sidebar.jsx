@@ -6,34 +6,24 @@ import ToggleDisplay from "./ToggleDisplay";
 import ToggleHide from "./ToggleHide";
 
 const Sidebar = () => {
-  const [toggle, setToggle] = useState(false);
+  const [isExpanded, setExpanded] = useState(false);
   const handleClick = () => {
-    setToggle((previousClick) => {
+    setExpanded((previousClick) => {
       return !previousClick;
     });
   };
+  const expandedCardWidth = { base: "80%", md: "40%", lg: "24%", xl: "24%" };
+  const collapsedCardWidth = { base: "40%", md: "20%", lg: "14%", xl: "14%" };
   return (
     <Card
-      w={{ base: "80%", md: "40%", lg: "24%", xl: "24%" }}
+      w={isExpanded ? expandedCardWidth : collapsedCardWidth}
       boxShadow={"rgba(149, 157, 165, 0.2) 0px 10px 24px"}
       py="3px"
     >
       <CardBody p="6">
         <Stack justifyContent={"space-between"}>
           {/* gap={3} */}
-          {toggle ? (
-            <>
-              <Button
-                border="2px solid"
-                color="transparent"
-                variant={"ghost"}
-                _hover={{ variant: "ghost" }}
-              >
-                <FaArrowRight color={"#0363FE"} onClick={() => handleClick()} />
-              </Button>
-              <ToggleHide />
-            </>
-          ) : (
+          {isExpanded ? (
             <>
               <Button
                 w={{
@@ -51,7 +41,19 @@ const Sidebar = () => {
               >
                 Hide Sidebar
               </Button>
-              <ToggleDisplay toggle={toggle} setToggle={setToggle} />
+              <ToggleDisplay toggle={isExpanded} setToggle={setExpanded} />
+            </>
+          ) : (
+            <>
+              <Button
+                border="2px solid"
+                color="transparent"
+                variant={"ghost"}
+                _hover={{ variant: "ghost" }}
+              >
+                <FaArrowRight color={"#0363FE"} onClick={() => handleClick()} />
+              </Button>
+              <ToggleHide />
             </>
           )}
         </Stack>

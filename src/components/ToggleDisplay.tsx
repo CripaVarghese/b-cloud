@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, Stack, Box, Image, Button } from "@chakra-ui/react";
+import { Text, Stack, Box, Image } from "@chakra-ui/react";
 import List from "./List";
 
 const ToggleDisplay = (props) => {
@@ -17,7 +17,7 @@ const ToggleDisplay = (props) => {
       </Stack>
 
       <Box>
-        <List toggle={toggle} setToggle={setToggle} />
+        <List />
       </Box>
     </Stack>
   );

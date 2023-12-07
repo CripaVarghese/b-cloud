@@ -1,9 +1,7 @@
 import { Button, HStack, Stack, Text } from "@chakra-ui/react";
 import buttonList from "../dataLists/buttonList";
 
-const List = (props) => {
-  // eslint-disable-next-line react/prop-types
-  const { toggle } = props;
+const List = () => {
   return (
     <Stack justifyContent={"space-between"} h="100%" gap="3">
       {buttonList.map((list, i) => (
@@ -25,22 +23,18 @@ const List = (props) => {
           >
             <list.svg className="icon" color="#0363FE" />
           </Button>
-          {!toggle ? (
-            <Text
-              w="full"
-              h="full"
-              py="12px"
-              variant="ghost"
-              fontSize={"11"}
-              fontWeight={"semibold"}
-              color="#0363FE"
-              _hover={{ color: "white" }}
-            >
-              {list.title}
-            </Text>
-          ) : (
-            ""
-          )}
+          <Text
+            w="full"
+            h="full"
+            py="12px"
+            variant="ghost"
+            fontSize={"11"}
+            fontWeight={"semibold"}
+            color="#0363FE"
+            _hover={{ color: "white" }}
+          >
+            {list.title}
+          </Text>
         </HStack>
       ))}
     </Stack>
