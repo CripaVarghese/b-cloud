@@ -19,7 +19,7 @@ const Details = () => {
       gap="20px"
     >
       <StatusDetails />
-      <Stack w={{ md: "100%" }} justifyContent={"space-between"}>
+      <Stack justifyContent={"space-between"}>
         <InsightsHeader />
         <Stack
           flexDirection={{ base: "column", md: "column", lg: "row" }}

@@ -8,8 +8,8 @@ const ChartUnitSold = () => {
       <Chart
         color="#0063FF"
         data={data}
-        width={{ md: "100%", lg: "390px", xl: "675px", "2xl": "100%" }}
-        height={{ md: 390, lg: "330", "2xl": 485 }}
+        width={{ md: "390px", lg: "400px", xl: "99%", "2xl": "99%" }}
+        height={{ lg: 370, "2xl": 400 }}
         text={"Units Sold"}
       />
     </Stack>
