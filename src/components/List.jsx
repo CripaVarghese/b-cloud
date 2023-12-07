@@ -16,10 +16,7 @@ const List = () => {
           border={".5px solid #7FB2FF"}
           borderRadius={5}
           gap="0"
-          _active={{
-            bg: "#E4F1FF",
-            borderColor: "#E4F1FF",
-          }}
+          _active={{ bg: "#0363FE", fontcolor: "white" }}
           onClick={() => {
             navigate(`/products/${list.href}`);
           }}
