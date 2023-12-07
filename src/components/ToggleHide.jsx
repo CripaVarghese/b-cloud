@@ -1,7 +1,9 @@
 import { Stack, Image, Box, Button, HStack } from "@chakra-ui/react";
 import buttonList from "../dataLists/buttonList";
+// import { useNavigate } from "react-router-dom";
 
 const ToggleHide = () => {
+  // const navigate = useNavigate();
   return (
     <Stack gap={{ lg: "0", xl: "10", "2xl": "20" }}>
       <Stack h="100px" alignItems={"center"}>
@@ -19,7 +21,9 @@ const ToggleHide = () => {
               cursor={"pointer"}
               border={".5px solid #7FB2FF"}
               borderRadius={5}
-              href={list.href ?? "#"}
+              // onClick={() => {
+              //   navigate(list.href);
+              // }}
             >
               <Button
                 variant={"ghost"}

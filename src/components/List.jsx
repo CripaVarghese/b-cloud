@@ -1,7 +1,9 @@
 import { Button, HStack, Stack, Text } from "@chakra-ui/react";
 import buttonList from "../dataLists/buttonList";
+// import { useNavigate } from "react-router-dom";
 
 const List = () => {
+  // const navigate = useNavigate();
   return (
     <Stack justifyContent={"space-between"} h="100%" gap="3">
       {buttonList.map((list, i) => (
@@ -13,8 +15,10 @@ const List = () => {
           cursor={"pointer"}
           border={".5px solid #7FB2FF"}
           borderRadius={5}
-          href={list.href ?? "#"}
           gap="0"
+          // onClick={() => {
+          //   navigate(list.href);
+          // }}
         >
           <Button
             variant={"ghost"}

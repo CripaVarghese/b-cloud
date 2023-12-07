@@ -8,27 +8,27 @@ const buttonList = [
   {
     svg: Dashboard,
     title: "Dashboard",
-    href: "#",
+    href: "/details",
   },
   {
     svg: Markets,
     title: "General Information",
-    href: "#",
+    href: "/general-info",
   },
   {
     svg: Transactions,
     title: "Transactions",
-    href: "#",
+    href: "/transactions",
   },
   {
     svg: Billing,
     title: "Pricing",
-    href: "#",
+    href: "/pricing",
   },
   {
     svg: ProductFeature,
     title: "Product Features",
-    href: "#",
+    href: "/feature",
   },
 ];
 

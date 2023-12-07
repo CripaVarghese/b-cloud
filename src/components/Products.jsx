@@ -2,6 +2,7 @@ import Sidebar from "./Sidebar";
 import { Stack, Text } from "@chakra-ui/react";
 import Details from "./Details";
 import { productDetailsStyles as style } from "../styles";
+// import { Outlet } from "react-router-dom";
 
 const Products = () => {
   return (
@@ -18,6 +19,7 @@ const Products = () => {
         alignItems={{ base: "center", md: "flex-start" }}
       >
         <Sidebar />
+        {/* <Outlet /> */}
         <Details />
       </Stack>
     </Stack>
