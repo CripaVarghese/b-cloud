@@ -12,8 +12,8 @@ const Sidebar = () => {
       return !previousClick;
     });
   };
-  const expandedCardWidth = { base: "80%", md: "40%", lg: "24%", xl: "24%" };
-  const collapsedCardWidth = { base: "40%", md: "20%", lg: "14%", xl: "14%" };
+  const expandedCardWidth = { base: "80%", lg: "40%", xl: "32%" };
+  const collapsedCardWidth = { base: "40%", md: "30%", lg: "14%", xl: "14%" };
   return (
     <Card
       w={isExpanded ? expandedCardWidth : collapsedCardWidth}
