@@ -9,6 +9,7 @@ import {
   useBreakpointValue,
 } from "@chakra-ui/react";
 import statusList from "../dataLists/statusList";
+import { style } from "../styles";
 
 const StatusDetails = () => {
   const orientation = useBreakpointValue({
@@ -39,7 +40,7 @@ const StatusDetails = () => {
               gap={"20px"}
             >
               <Stack justifyContent={"space-between"} gap={3} w="100%">
-                <Text fontWeight="bold" fontSize={"xs"} mt="5px">
+                <Text {...style.xsBold} mt="5px">
                   {list.title}
                 </Text>
                 <Text p={"0"} fontSize={"22"} fontWeight={"bold"}>

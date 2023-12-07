@@ -1,5 +1,5 @@
 import { Stack, Text } from "@chakra-ui/react";
-import { productDetailsStyles as style } from "../styles";
+import { style } from "../styles";
 import SelectDuration from "./SelectDuration";
 
 const InsightsHeader = () => {

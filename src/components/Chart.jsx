@@ -9,7 +9,7 @@ import {
 } from "recharts";
 
 import { Card, CardBody, Text, chakra } from "@chakra-ui/react";
-import { productDetailsStyles as style } from "../styles";
+import { style } from "../styles";
 
 export default function Chart(props) {
   // eslint-disable-next-line react/prop-types
@@ -21,7 +21,7 @@ export default function Chart(props) {
       height={height}
     >
       <CardBody>
-        <Text fontSize={"xs"} fontWeight="bold">
+        <Text {...style.xsBold}>
           {text} <chakra.span color="#6B6B6B">(Last 24 hours)</chakra.span>
         </Text>
         <ResponsiveContainer height="94%">

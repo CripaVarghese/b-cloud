@@ -8,7 +8,13 @@ const lgFontStyles = {
   fontWeight: "bold",
 };
 
-export const productDetailsStyles = {
+const xsBold = {
+  fontWeight: "bold",
+  fontSize: "xs",
+};
+
+export const style = {
   textStyles,
   lgFontStyles,
+  xsBold,
 };

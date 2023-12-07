@@ -2,6 +2,7 @@ import { HStack, Text, Image } from "@chakra-ui/react";
 import CloudLogo from "../assets/CloudLogo";
 import Cantaloupe from "../assets/Cantaloupe";
 import Settings from "../assets/Settings";
+import { style } from "../styles";
 
 const Header = () => {
   return (
@@ -17,8 +18,7 @@ const Header = () => {
         <Image src="/images/ProfilePhoto.png" boxSize={"5"} />
         <Text
           color="#0063FF"
-          fontSize={"xs"}
-          fontWeight={"bold"}
+          {...style.xsBold}
           p={{ base: "0", md: "0", lg: "0 5px" }}
         >
           John Doe

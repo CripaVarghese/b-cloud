@@ -15,7 +15,6 @@ const ToggleHide = () => {
           {buttonList.map((list, i) => (
             <HStack
               key={i}
-              // w="100%"
               justifyContent={"center"}
               _hover={{ bg: "#0363FE", color: "white" }}
               cursor={"pointer"}
