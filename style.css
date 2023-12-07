@@ -4,7 +4,17 @@ svg:hover .icon{
   fill:white;
 }
 
+
+ .icon{
+  fill:#0363FE;
+}
+
+
 .active {
   background-color: rgb(208, 255, 0);
   color: white;
+}
+
+.parent:hover .child {
+  color: 'white'
 }

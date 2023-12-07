@@ -21,8 +21,13 @@ const ToggleHide = () => {
               borderRadius={5}
               href={list.href ?? "#"}
             >
-              <Button variant={"ghost"} _hover={{ variant: "ghost" }}>
-                <list.svg className="icon" />
+              <Button
+                variant={"ghost"}
+                _hover={{ variant: "ghost", color: "white" }}
+                w="full"
+                className="icon"
+              >
+                <list.svg className="icon" color={"#0363FE"} />
               </Button>
             </HStack>
           ))}

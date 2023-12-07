@@ -1,11 +1,12 @@
-// eslint-disable-next-line react/prop-types
-const Dashboard = ({ className }) => {
+/* eslint-disable react/prop-types */
+const Dashboard = (props) => {
+  const { width = "14", height = "17", color, className } = props;
   return (
     <svg
-      width="14"
-      height="17"
+      width={width}
+      height={height}
       viewBox="0 0 19 18"
-      fill="none"
+      fill={color}
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
