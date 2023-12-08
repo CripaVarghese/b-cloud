@@ -1,6 +1,5 @@
 import Sidebar from "./Sidebar";
 import { Stack, Text } from "@chakra-ui/react";
-// import Details from "./Details";
 import { style } from "../styles";
 import { Outlet } from "react-router-dom";
 // import { Outlet } from "react-router-dom";
