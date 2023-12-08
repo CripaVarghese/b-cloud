@@ -11,7 +11,7 @@ import Billing from "../assets/Billing";
 import Reports from "../assets/Reports";
 import Admin from "../assets/Admin";
 
-export const navbar = [
+const navbar = [
   {
     svg: Dashboard,
     title: "Dashboard",
@@ -73,3 +73,5 @@ export const navbar = [
     href: "/admin",
   },
 ];
+
+export default navbar;
