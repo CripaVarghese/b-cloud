@@ -14,9 +14,9 @@ const Sidebar = () => {
   };
   const expandedCardWidth = {
     base: "80%",
-    md: "60%",
-    lg: "40%",
-    xl: "32%",
+    md: "40%",
+    lg: "25%",
+    xl: "24%",
   };
   const collapsedCardWidth = {
     base: "40%",

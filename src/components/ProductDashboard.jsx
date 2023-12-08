@@ -7,7 +7,7 @@ import StatusDetails from "./StatusDetails";
 import { Stack } from "@chakra-ui/react";
 
 const ProductDashboard = () => {
-  const expandedCardWidth = { base: "100%", md: "100%", lg: "100%" };
+  const expandedCardWidth = { base: "100%", md: "50%", lg: "70%", xl: "70%" };
   const collapsedCardWidth = { base: "80%", md: "40%", lg: "38%" };
 
   // eslint-disable-next-line no-unused-vars
