@@ -1,9 +1,9 @@
 import { Card, CardBody, Stack, Button } from "@chakra-ui/react";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
-
 import { useState } from "react";
 import ToggleDisplay from "./ToggleDisplay";
 import ToggleHide from "./ToggleHide";
+import { style } from "../styles";
 
 const Sidebar = () => {
   const [isExpanded, setExpanded] = useState(true);
@@ -45,7 +45,7 @@ const Sidebar = () => {
                 }}
                 variant={"ghost"}
                 border="2px solid"
-                color={"#0363FE"}
+                color={style.themeColor.color}
                 leftIcon={<FaArrowLeft />}
                 onClick={() => handleClick()}
               >
@@ -61,7 +61,10 @@ const Sidebar = () => {
                 variant={"ghost"}
                 _hover={{ variant: "ghost" }}
               >
-                <FaArrowRight color={"#0363FE"} onClick={() => handleClick()} />
+                <FaArrowRight
+                  color={style.themeColor.color}
+                  onClick={() => handleClick()}
+                />
               </Button>
               <ToggleHide />
             </>

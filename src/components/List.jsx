@@ -1,6 +1,7 @@
 import { Button, HStack, Stack, Text } from "@chakra-ui/react";
 import buttonList from "../dataLists/buttonList";
 import { useNavigate } from "react-router-dom";
+import { style } from "../styles";
 
 const List = () => {
   const navigate = useNavigate();
@@ -11,12 +12,12 @@ const List = () => {
           key={i}
           w="100%"
           justifyContent={"flex-start"}
-          _hover={{ bg: "#0363FE", color: "white" }}
+          _hover={{ bg: style.themeColor.bg, color: "white" }}
           cursor={"pointer"}
           border={".5px solid #7FB2FF"}
           borderRadius={5}
           gap="0"
-          _active={{ bg: "#0363FE", color: "white" }}
+          _active={{ bg: style.themeColor.bg, color: "white" }}
           onClick={() => {
             navigate(`/products/${list.href}`);
           }}
@@ -26,7 +27,7 @@ const List = () => {
             _hover={{ variant: "ghost" }}
             className="icon"
           >
-            <list.svg className="icon" color="#0363FE" />
+            <list.svg className="icon" color={style.themeColor.color} />
           </Button>
           <Text
             w="full"
@@ -35,7 +36,7 @@ const List = () => {
             variant="ghost"
             fontSize={"11"}
             fontWeight={"semibold"}
-            color="#0363FE"
+            color={style.themeColor.color}
             _hover={{ color: "white" }}
           >
             {list.title}

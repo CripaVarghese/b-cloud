@@ -13,8 +13,14 @@ const xsBold = {
   fontSize: "xs",
 };
 
+const themeColor = {
+  color: "#0363FE",
+  bg: "#0363FE",
+};
+
 export const style = {
   textStyles,
   lgFontStyles,
   xsBold,
+  themeColor,
 };

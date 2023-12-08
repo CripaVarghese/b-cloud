@@ -1,6 +1,7 @@
 import { Stack, Image, Box, Button, HStack } from "@chakra-ui/react";
 import buttonList from "../dataLists/buttonList";
 import { useNavigate } from "react-router-dom";
+import { style } from "../styles";
 
 const ToggleHide = () => {
   const navigate = useNavigate();
@@ -16,11 +17,11 @@ const ToggleHide = () => {
             <HStack
               key={i}
               justifyContent={"center"}
-              _hover={{ bg: "#0363FE", color: "white" }}
+              _hover={{ bg: style.themeColor.bg, color: "white" }}
               cursor={"pointer"}
               border={".5px solid #7FB2FF"}
               borderRadius={5}
-              _active={{ bg: "#0363FE", color: "white" }}
+              _active={{ bg: style.themeColor.bg, color: "white" }}
               onClick={() => {
                 navigate(`/products/${list.href}`);
               }}
@@ -31,7 +32,7 @@ const ToggleHide = () => {
                 w="full"
                 className="icon"
               >
-                <list.svg className="icon" color={"#0363FE"} />
+                <list.svg className="icon" color={style.themeColor.color} />
               </Button>
             </HStack>
           ))}
