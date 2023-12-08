@@ -1,6 +1,6 @@
 import { Button, HStack } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
-import { navbar } from "../constants/navbar";
+import { navbar } from "../dataLists/navbar";
 
 const Navbar = () => {
   return (
