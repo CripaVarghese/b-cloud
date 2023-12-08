@@ -1,14 +1,16 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import { URL_PATHS } from "./constants/routes";
 import Products from "./components/Products";
 import AppLayout from "./components/AppLayout";
 import ProductDashboard from "./components/ProductDashboard";
 
+const defaultPath = `${URL_PATHS.PRODUCTS}/${URL_PATHS.PRODUCT_DASHBOARD}`;
+
 const App = () => {
   return (
     <Routes>
       <Route element={<AppLayout />}>
-        <Route path={"/"} element={<Products />} />
+        <Route path={"/"} element={<Navigate to={defaultPath} replace />} />
         <Route path={URL_PATHS.DASHBOARD} element={<h1>DASHBOARD</h1>} />
         <Route path={URL_PATHS.MARKETS} element={<h1>MARKETS</h1>} />
         <Route path={URL_PATHS.MACHINES} element={<h1>MACHINES</h1>} />
