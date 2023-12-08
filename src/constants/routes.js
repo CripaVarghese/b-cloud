@@ -11,4 +11,8 @@ export const URL_PATHS = {
   BILLING: "/billing",
   REPORTS: "/reports",
   ADMIN: "/admin",
+  PRODUCT_DASHBOARD: "product-dashboard",
+  GENERAL_INFO: "general-info",
+  PRICING: "pricing",
+  FEATURE: "feature",
 };

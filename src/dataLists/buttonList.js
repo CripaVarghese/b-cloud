@@ -8,7 +8,7 @@ const buttonList = [
   {
     svg: Dashboard,
     title: "Dashboard",
-    href: "details",
+    href: "product-dashboard",
   },
   {
     svg: Markets,

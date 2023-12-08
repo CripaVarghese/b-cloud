@@ -2,7 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import { URL_PATHS } from "./constants/routes";
 import Products from "./components/Products";
 import AppLayout from "./components/AppLayout";
-import Details from "./components/Details";
+import ProductDashboard from "./components/ProductDashboard";
 
 const App = () => {
   return (
@@ -15,15 +15,21 @@ const App = () => {
         <Route path={URL_PATHS.OPERATORS} element={<h1>OPERATORS</h1>} />
 
         <Route path={URL_PATHS.PRODUCTS} element={<Products />}>
-          <Route path={"details"} element={<Details />} />
-          <Route path={"general-info"} element={<h1>General Information</h1>} />
+          <Route
+            path={URL_PATHS.PRODUCT_DASHBOARD}
+            element={<ProductDashboard />}
+          />
+          <Route
+            path={URL_PATHS.GENERAL_INFO}
+            element={<h1>General Information</h1>}
+          />
           <Route
             path={URL_PATHS.TRANSACTIONS}
             element={<h1>TRANSACTIONS</h1>}
           />
 
-          <Route path={"pricing"} element={<h1>Pricing</h1>} />
-          <Route path={"feature"} element={<h1>Feature</h1>} />
+          <Route path={URL_PATHS.PRICING} element={<h1>Pricing</h1>} />
+          <Route path={URL_PATHS.FEATURE} element={<h1>Feature</h1>} />
         </Route>
 
         <Route path={URL_PATHS.TRANSACTIONS} element={<h1>TRANSACTIONS</h1>} />
