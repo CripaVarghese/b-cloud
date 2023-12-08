@@ -37,11 +37,11 @@ const Sidebar = () => {
               <Button
                 w={{
                   base: "70%",
-                  sm: "20%",
+                  sm: "45%",
                   md: "65%",
                   lg: "75%",
-                  xl: "50%",
-                  "2xl": "30%",
+                  xl: "65%",
+                  "2xl": "50%",
                 }}
                 variant={"ghost"}
                 border="2px solid"
