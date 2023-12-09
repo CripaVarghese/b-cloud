@@ -12,24 +12,34 @@ const ToggleHide = () => {
       </Stack>
 
       <Box>
-        <Stack justifyContent={"space-between"} h="100%" gap="3">
+        <Stack
+          justifyContent={"space-between"}
+          h="100%"
+          gap="3"
+          alignItems={"center"}
+        >
           {buttonList.map((list, i) => (
             <HStack
+              w="70px"
+              borderRadius="7px"
               key={i}
-              justifyContent={"center"}
-              _hover={{ bg: style.themeColor.bg, color: "white" }}
               cursor={"pointer"}
               border={".5px solid #7FB2FF"}
-              borderRadius={5}
               _active={{ bg: style.themeColor.bg, color: "white" }}
               onClick={() => {
                 navigate(`/products/${list.href}`);
               }}
+              justifyContent={"space-around"}
             >
               <Button
                 variant={"ghost"}
-                _hover={{ variant: "ghost", color: "white" }}
+                _hover={{
+                  variant: "ghost",
+                  bg: style.themeColor.bg,
+                  color: "white",
+                }}
                 w="full"
+                h="30px"
                 className="icon"
               >
                 <list.svg className="icon" color={style.themeColor.color} />

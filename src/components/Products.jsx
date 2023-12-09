@@ -11,7 +11,6 @@ const Products = () => {
       </Text>
 
       <Stack
-        w={{ base: "80%", md: "100%" }}
         gap="24px"
         flexDirection={{ base: "column", md: "row", lg: "row" }}
         alignItems={{ base: "center", md: "flex-start" }}

@@ -14,9 +14,10 @@ const Sidebar = () => {
   };
   const expandedCardWidth = {
     base: "80%",
+    sm: "60%",
     md: "40%",
-    lg: "25%",
-    xl: "24%",
+    lg: "30%",
+    xl: "28%",
   };
   const collapsedCardWidth = {
     base: "40%",
@@ -36,13 +37,14 @@ const Sidebar = () => {
             <>
               <Button
                 w={{
-                  base: "70%",
-                  sm: "45%",
-                  md: "65%",
-                  lg: "75%",
-                  xl: "65%",
-                  "2xl": "50%",
+                  base: "52%",
+                  sm: "50%",
+                  md: "68%",
+                  lg: "65%",
+                  xl: "45%",
+                  "2xl": "35%",
                 }}
+                fontSize="15px"
                 variant={"ghost"}
                 border="2px solid"
                 color={style.themeColor.color}

@@ -5,7 +5,7 @@ const ChartRevenue = () => {
     <Chart
       color="#00CD4D"
       data={data}
-      width="98%"
+      width="99%"
       height={{ md: 390, lg: 370, "2xl": 400 }}
       text={"Revenue"}
     />

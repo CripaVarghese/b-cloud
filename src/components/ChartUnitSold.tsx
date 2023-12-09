@@ -8,7 +8,7 @@ const ChartUnitSold = () => {
       <Chart
         color="#0063FF"
         data={data}
-        width={{ md: "390px", lg: "400px", xl: "99%", "2xl": "99%" }}
+        width="99%"
         height={{ lg: 370, "2xl": 400 }}
         text={"Units Sold"}
       />
