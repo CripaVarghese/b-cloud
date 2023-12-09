@@ -40,8 +40,8 @@ const Sidebar = () => {
                   base: "52%",
                   sm: "50%",
                   md: "68%",
-                  lg: "65%",
-                  xl: "45%",
+                  lg: "74%",
+                  xl: "50%",
                   "2xl": "35%",
                 }}
                 fontSize="15px"
