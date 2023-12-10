@@ -35,7 +35,6 @@ const ToggleHide = () => {
               borderRadius="7px"
               cursor={"pointer"}
               border={".5px solid #7FB2FF"}
-              _active={{ bg: style.themeColor.bg, color: "white" }}
               onClick={() => {
                 handleClick(index);
                 navigate(`/products/${list.href}`);
@@ -45,11 +44,7 @@ const ToggleHide = () => {
             >
               <Button
                 variant={"ghost"}
-                _hover={{
-                  variant: "ghost",
-                  bg: style.themeColor.bg,
-                  color: "white",
-                }}
+                _hover={{ variant: "ghost" }}
                 w="full"
                 h="30px"
               >

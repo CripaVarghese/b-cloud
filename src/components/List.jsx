@@ -22,7 +22,6 @@ const List = () => {
           }}
           w="100%"
           justifyContent={"flex-start"}
-          _hover={{ bg: style.themeColor.bg, color: "white" }}
           cursor={"pointer"}
           border={".5px solid #7FB2FF"}
           borderRadius={5}
