@@ -2,9 +2,15 @@ import { Stack, Image, Box, Button, HStack } from "@chakra-ui/react";
 import buttonList from "../dataLists/buttonList";
 import { useNavigate } from "react-router-dom";
 import { style } from "../styles";
+import { useState } from "react";
 
 const ToggleHide = () => {
   const navigate = useNavigate();
+  const [activeButton, setActiveButton] = useState(null);
+
+  const handleClick = (id) => {
+    setActiveButton(id);
+  };
   return (
     <Stack gap={{ lg: "0", xl: "10", "2xl": "20" }}>
       <Stack h="100px" alignItems={"center"}>
@@ -18,15 +24,20 @@ const ToggleHide = () => {
           gap="3"
           alignItems={"center"}
         >
-          {buttonList.map((list, i) => (
+          {buttonList.map((list, index) => (
             <HStack
+              key={index}
+              style={{
+                backgroundColor:
+                  activeButton === index ? style.themeColor.bg : "transparent",
+              }}
               w="70px"
               borderRadius="7px"
-              key={i}
               cursor={"pointer"}
               border={".5px solid #7FB2FF"}
               _active={{ bg: style.themeColor.bg, color: "white" }}
               onClick={() => {
+                handleClick(index);
                 navigate(`/products/${list.href}`);
               }}
               justifyContent={"space-around"}
@@ -42,7 +53,10 @@ const ToggleHide = () => {
                 w="full"
                 h="30px"
               >
-                <list.svg className="icon" color={style.themeColor.color} />
+                <list.svg
+                  className="icon"
+                  color={activeButton === index ? "white" : style.themeColor.bg}
+                />
               </Button>
             </HStack>
           ))}
