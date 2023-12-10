@@ -1,8 +1,14 @@
 import { Button, HStack } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import navbar from "../dataLists/navbar";
+import { useState } from "react";
 
 const Navbar = () => {
+  const [activeButton, setActiveButton] = useState(null);
+
+  const handleClick = (id) => {
+    setActiveButton(id);
+  };
   return (
     <HStack
       justifyContent={"space-between"}
@@ -12,10 +18,15 @@ const Navbar = () => {
       gap={{ md: "0" }}
       overflow={"auto"}
     >
-      {navbar.map((navbarItem, i) => (
-        <Link to={navbarItem.href} key={i}>
+      {navbar.map((navbarItem, index) => (
+        <Link to={navbarItem.href} key={index}>
           <HStack>
             <Button
+              style={{
+                backgroundColor:
+                  activeButton === index ? "#E4F1FF" : "transparent",
+              }}
+              onClick={() => handleClick(index)}
               leftIcon={<navbarItem.svg />}
               variant="ghost"
               fontSize={"11"}
@@ -23,15 +34,7 @@ const Navbar = () => {
               size="xs"
               borderRadius="15"
               p="13px 12px"
-              _hover={{ backgroundColor: "#E4F1FF", borderRadius: "15" }}
               cursor={"pointer"}
-              _active={{
-                bg: "#E4F1FF",
-                borderColor: "#E4F1FF",
-              }}
-              _focus={{
-                bg: "#E4F1FF",
-              }}
             >
               {navbarItem.title}
             </Button>
