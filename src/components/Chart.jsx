@@ -60,7 +60,12 @@ export default function Chart(props) {
               }}
             />
             <CartesianGrid vertical={false} horizontal={true} />
-            <Bar dataKey="value" fill={color} radius={[10, 10, 0, 0]} />
+            <Bar
+              dataKey="value"
+              fill={color}
+              isAnimationActive={false}
+              radius={[10, 10, 0, 0]}
+            />
           </BarChart>
         </ResponsiveContainer>
       </CardBody>
