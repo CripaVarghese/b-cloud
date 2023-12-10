@@ -21,12 +21,9 @@ const List = () => {
           onClick={() => {
             navigate(`/products/${list.href}`);
           }}
+          className="sidebar-button"
         >
-          <Button
-            variant={"ghost"}
-            _hover={{ variant: "ghost" }}
-            className="icon"
-          >
+          <Button variant={"ghost"} _hover={{ variant: "ghost" }}>
             <list.svg className="icon" color={style.themeColor.color} />
           </Button>
           <Text
@@ -37,7 +34,7 @@ const List = () => {
             fontSize={"11"}
             fontWeight={"semibold"}
             color={style.themeColor.color}
-            _hover={{ color: "white" }}
+            className="text-button"
           >
             {list.title}
           </Text>

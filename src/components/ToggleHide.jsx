@@ -30,6 +30,7 @@ const ToggleHide = () => {
                 navigate(`/products/${list.href}`);
               }}
               justifyContent={"space-around"}
+              className="sidebar-button"
             >
               <Button
                 variant={"ghost"}
@@ -40,7 +41,6 @@ const ToggleHide = () => {
                 }}
                 w="full"
                 h="30px"
-                className="icon"
               >
                 <list.svg className="icon" color={style.themeColor.color} />
               </Button>
