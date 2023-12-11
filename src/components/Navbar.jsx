@@ -4,7 +4,7 @@ import navbar from "../dataLists/navbar";
 import { useState } from "react";
 
 const Navbar = () => {
-  const [activeButton, setActiveButton] = useState(null);
+  const [activeButton, setActiveButton] = useState("Products");
 
   const handleClick = (id) => {
     setActiveButton(id);
@@ -18,15 +18,15 @@ const Navbar = () => {
       gap={{ md: "0" }}
       overflow={"auto"}
     >
-      {navbar.map((navbarItem, index) => (
-        <Link to={navbarItem.href} key={index}>
+      {navbar.map((navbarItem) => (
+        <Link to={navbarItem.href} key={navbarItem.title}>
           <HStack>
             <Button
               style={{
                 backgroundColor:
-                  activeButton === index ? "#E4F1FF" : "transparent",
+                  activeButton === navbarItem.title ? "#E4F1FF" : "transparent",
               }}
-              onClick={() => handleClick(index)}
+              onClick={() => handleClick(navbarItem.title)}
               leftIcon={<navbarItem.svg />}
               variant="ghost"
               fontSize={"11"}

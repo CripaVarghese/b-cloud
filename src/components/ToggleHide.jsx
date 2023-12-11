@@ -6,7 +6,7 @@ import { useState } from "react";
 
 const ToggleHide = () => {
   const navigate = useNavigate();
-  const [activeButton, setActiveButton] = useState(null);
+  const [activeButton, setActiveButton] = useState("Dashboard");
 
   const handleClick = (id) => {
     setActiveButton(id);
@@ -24,19 +24,21 @@ const ToggleHide = () => {
           gap="3"
           alignItems={"center"}
         >
-          {buttonList.map((list, index) => (
+          {buttonList.map((list) => (
             <HStack
-              key={index}
+              key={list.title}
               style={{
                 backgroundColor:
-                  activeButton === index ? style.themeColor.bg : "transparent",
+                  activeButton === list.title
+                    ? style.themeColor.bg
+                    : "transparent",
               }}
               w="70px"
               borderRadius="7px"
               cursor={"pointer"}
               border={".5px solid #7FB2FF"}
               onClick={() => {
-                handleClick(index);
+                handleClick(list.title);
                 navigate(`/products/${list.href}`);
               }}
               justifyContent={"space-around"}
@@ -50,7 +52,9 @@ const ToggleHide = () => {
               >
                 <list.svg
                   className="icon"
-                  color={activeButton === index ? "white" : style.themeColor.bg}
+                  color={
+                    activeButton === list.title ? "white" : style.themeColor.bg
+                  }
                 />
               </Button>
             </HStack>

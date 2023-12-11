@@ -6,19 +6,19 @@ import { useState } from "react";
 
 const List = () => {
   const navigate = useNavigate();
-  const [activeButton, setActiveButton] = useState(null);
+  const [activeButton, setActiveButton] = useState("Dashboard");
 
   const handleClick = (id) => {
     setActiveButton(id);
   };
   return (
     <Stack justifyContent={"space-between"} h="100%" gap="3">
-      {buttonList.map((list, index) => (
+      {buttonList.map((list) => (
         <HStack
-          key={index}
+          key={list.title}
           style={{
             backgroundColor:
-              activeButton === index ? style.themeColor.bg : "transparent",
+              activeButton === list.title ? style.themeColor.bg : "transparent",
           }}
           w="100%"
           justifyContent={"flex-start"}
@@ -27,7 +27,7 @@ const List = () => {
           borderRadius={5}
           gap="0"
           onClick={() => {
-            handleClick(index);
+            handleClick(list.title);
             navigate(`/products/${list.href}`);
           }}
           className="sidebar-button"
@@ -35,7 +35,9 @@ const List = () => {
           <Button variant={"ghost"} _hover={{ variant: "ghost" }}>
             <list.svg
               className="icon"
-              color={activeButton === index ? "white" : style.themeColor.bg}
+              color={
+                activeButton === list.title ? "white" : style.themeColor.bg
+              }
             />
           </Button>
           <Text
@@ -46,7 +48,8 @@ const List = () => {
             fontSize={"11"}
             fontWeight={"semibold"}
             style={{
-              color: activeButton === index ? "white" : style.themeColor.color,
+              color:
+                activeButton === list.title ? "white" : style.themeColor.color,
             }}
             color={style.themeColor.color}
             className="text-button"
